@@ -14,10 +14,10 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class firstfrag extends Fragment {
+public class Profile extends Fragment {
 
     int x;
-    public firstfrag() {
+    public Profile() {
         // Required empty public constructor
     }
 

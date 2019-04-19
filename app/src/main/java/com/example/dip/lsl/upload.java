@@ -8,4 +8,10 @@ public class upload {
     void setKey(String key){
         this.key = key;
     }
+    String getKey(){
+        return key;
+    }
+    String getUrl(){
+        return url;
+    }
 }

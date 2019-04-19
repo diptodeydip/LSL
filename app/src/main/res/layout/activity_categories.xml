@@ -6,33 +6,38 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/backgroundgradient"
     tools:context=".Categories">
 
     <Button
-        android:layout_marginTop="40dp"
-            android:id="@+id/Alphabets"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+        android:id="@+id/Alphabets"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-            android:text="Alphabets"
-        android:textSize="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/design"
+        android:text="Alphabets"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/Emot"
-        android:layout_width="match_parent"
+        android:layout_width="223dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:textSize="30dp"
         android:layout_gravity="center"
-        android:text="Emotions"/>
-        <Button
-            android:id="@+id/Days"
-        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:text="Emotions"
+        android:background="@drawable/design"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/Days"
+        android:layout_width="223dp"
         android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="30dp"
-        android:text="Days"/>
+        android:layout_gravity="center"
+        android:text="Days"
+        android:background="@drawable/design"
+        android:textSize="20dp" />
 
 
 </LinearLayout>

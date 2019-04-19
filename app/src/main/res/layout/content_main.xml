@@ -9,15 +9,12 @@
     tools:showIn="@layout/app_bar_main">
 
     <FrameLayout
-        android:layout_margin="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
+        android:layout_height="match_parent">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="30dp"
-            android:id="@+id/welcomemsg"
-            android:text="Welcome :)"/>
+            android:layout_height="match_parent"
+            android:src="@drawable/backgroundgradient"/>
+
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>

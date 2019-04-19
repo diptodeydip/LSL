@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context=".Login">
 
     <EditText
@@ -19,10 +20,11 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/design"
         android:layout_marginTop="250dp"
         android:text="LOG IN" />
 
@@ -38,13 +40,13 @@
         android:inputType="textPassword" />
 
 
-
     <Button
         android:id="@+id/sign_up_button"
-        android:layout_width="wrap_content"
+        android:layout_width="102dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:background="@drawable/design"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="320dp"
         android:text="sign up" />
 </RelativeLayout>

@@ -20,7 +20,11 @@
             android:title="Quiz Test" />
         <item
             android:id="@+id/nav_leader"
-            android:title="LeaderBoard" />
+            android:title="LeaderBoard"
+            />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="LogOut" />
     </group>
 
 

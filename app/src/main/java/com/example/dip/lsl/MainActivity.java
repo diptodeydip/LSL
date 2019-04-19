@@ -147,6 +147,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_quiz) {
             startActivity(new Intent(MainActivity.this,Quiz.class));
         }
+        else if(id== R.id.nav_logout){
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(getApplicationContext(),Login.class));
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -141,8 +141,7 @@ public class uploadimages extends AppCompatActivity {
                     });
         }
     }
-
-
+    
     private String getFileExtension(Uri uri) {
         ContentResolver cR = getContentResolver();
         MimeTypeMap mime = MimeTypeMap.getSingleton();

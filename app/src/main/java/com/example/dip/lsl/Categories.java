@@ -37,7 +37,7 @@ public class Categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 MainActivity.category = "Days";
-               // finish();
+               //// finish();
                 startActivity(new Intent(Categories.this,Contents.class));
             }
         });

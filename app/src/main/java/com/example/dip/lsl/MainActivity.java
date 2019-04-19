@@ -8,18 +8,35 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
        implements NavigationView.OnNavigationItemSelectedListener {
-
-       public  static String category;
+    RecyclerView rView;
+    DatabaseReference db;
+    List<upload> uploads;
+    ProgressBar pbar;
+    FirebaseAuth mAuth;
+    String userId;
+    FirebaseStorage fs;
+    ValueEventListener dBListener;
+       public  static String category,rating;
        TextView username;
        String un;
 
@@ -29,8 +46,36 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //
 
-        Toast.makeText(MainActivity.this,"Welcome "+FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString(),Toast.LENGTH_LONG).show();
+
+        db = FirebaseDatabase.getInstance().getReference("Users");
+        dBListener = db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+              //  Toast.makeText(MainActivity.this,"Paise", Toast.LENGTH_SHORT).show();
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    UserInformation up = postSnapshot.getValue(UserInformation.class);
+               //     Toast.makeText(MainActivity.this, "Paise22", Toast.LENGTH_SHORT).show();
+                    if(up.getUid().equalsIgnoreCase(FirebaseAuth.getInstance().getCurrentUser()
+                            .getUid())){
+                        MainActivity.rating = up.getLevel();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(MainActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+        //
+
+       // Toast.makeText(MainActivity.this,"Welcome "+FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString(),Toast.LENGTH_LONG).show();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -88,7 +133,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_prof) {
-            finish();
             startActivity(new Intent(MainActivity.this,Profile.class));
         } else if (id == R.id.nav_pracphoto) {
             startActivity(new Intent(MainActivity.this,Categories.class));
@@ -101,7 +145,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(getApplicationContext(),Leaderboard.class));
 
         } else if (id == R.id.nav_quiz) {
-            startActivity(new Intent(MainActivity.this,QuizContents.class));
+            startActivity(new Intent(MainActivity.this,Quiz.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

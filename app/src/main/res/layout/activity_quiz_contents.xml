@@ -8,31 +8,74 @@
     android:orientation="vertical"
     tools:context=".QuizContents">
 
-    <Button
-        android:layout_marginTop="40dp"
-        android:id="@+id/Alphabets1"
+    <TextView
+        android:id="@+id/lvl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_gravity="center"
-        android:text="Alphabets"
-        android:textSize="30dp"/>
+        android:text="Level-1"
+        android:textSize="30dp"
+        android:textAlignment="center" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/quesiv"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:weightSum="1"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="A"
+                android:id="@+id/radioButton"
+                android:checked="false"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"
+                android:id="@+id/radioButton2"
+                android:checked="false"
+                android:textSize="20dp"
+                android:layout_weight="0.13" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E"
+                android:id="@+id/radioButton3"
+                android:checked="false"
+                android:textSize="20dp"
+                android:layout_weight="0.13" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:id="@+id/radioButton4"
+                android:checked="false"
+                android:textSize="20dp"
+                android:layout_weight="0.13" />
+        </RadioGroup>
+    </LinearLayout>
+
+
 
     <Button
-        android:id="@+id/Emot1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:text="Emotions"/>
-    <Button
-        android:id="@+id/Days1"
-        android:layout_width="match_parent"
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="30dp"
-        android:text="Days"/>
+        android:text="Submit"/>
 
 
 </LinearLayout>

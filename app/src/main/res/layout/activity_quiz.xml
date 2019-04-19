@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Quiz">
 
-    <LinearLayout
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/Alphabets1"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:id="@+id/quiziv"
-            />
-        <EditText
-            android:id="@+id/ans"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:hint="Give your answer here"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/anssubmit"
-            android:text="Submit"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:text="Alphabets"
+        android:textSize="30dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/Emot1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:text="Emotions"/>
+    <Button
+        android:id="@+id/Days1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:text="Days"/>
+
+
+</LinearLayout>

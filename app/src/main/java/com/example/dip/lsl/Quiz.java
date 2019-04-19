@@ -30,7 +30,7 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View v) {
                 MainActivity.category = "Emotions";
                 // finish();
-                startActivity(new Intent(Quiz.this,QuizContents.class));
+               // startActivity(new Intent(Quiz.this,QuizContents.class));
             }
         });
         days.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +38,7 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View v) {
                 MainActivity.category = "Days";
                 //// finish();
-                startActivity(new Intent(Quiz.this,QuizContents.class));
+               // startActivity(new Intent(Quiz.this,QuizContents.class));
             }
         });
 

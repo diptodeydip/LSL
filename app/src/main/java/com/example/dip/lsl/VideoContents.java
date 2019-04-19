@@ -49,10 +49,10 @@ public class VideoContents extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 uploads.clear();
-                Toast.makeText(VideoContents.this,"Paise", Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(VideoContents.this,"Paise", Toast.LENGTH_SHORT).show();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     upload up = postSnapshot.getValue(upload.class);
-                    Toast.makeText(VideoContents.this,"Paise22", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(VideoContents.this,"Paise22", Toast.LENGTH_SHORT).show();
                     uploads.add(up);
                 }
                 iAdapter.notifyDataSetChanged();

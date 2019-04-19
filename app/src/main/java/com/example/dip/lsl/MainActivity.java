@@ -83,11 +83,6 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-/*        username = findViewById(R.id.username);
-        un = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString();
-        username.setText(un);
-        username = findViewById(R.id.welcomemsg);
-        username.setText("Welcome "+un);*/
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -108,6 +103,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
       //  getMenuInflater().inflate(R.menu.main, menu);
+        username = findViewById(R.id.usernamee);
+        un = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString();
+        username.setText(un);
         return true;
     }
 

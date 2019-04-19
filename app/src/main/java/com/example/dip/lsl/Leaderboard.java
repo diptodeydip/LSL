@@ -95,7 +95,7 @@ public class Leaderboard extends AppCompatActivity implements View.OnClickListen
                 ///
                 ///
                 /// /
-                viewHolder.v.setOnClickListener(new View.OnClickListener() {
+                /*viewHolder.v.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         addfriend = findViewById(R.id.addfriend);
@@ -105,7 +105,7 @@ public class Leaderboard extends AppCompatActivity implements View.OnClickListen
                         else addfriend.setVisibility(View.GONE);
 
                     }
-                });
+                });*/
             }
         };
         mUsers_list.setAdapter(firebaseRecyclerAdapter);

@@ -109,7 +109,7 @@ public class QuizContents extends AppCompatActivity {
                 else if(count == 3){
                     iv.setImageResource(R.drawable.e);
                 }
-                else{
+                else if(count == 4){
                     db = FirebaseDatabase.getInstance().getReference("Users").child(
                             FirebaseAuth.getInstance().getUid().toString()
                     ).child("level");

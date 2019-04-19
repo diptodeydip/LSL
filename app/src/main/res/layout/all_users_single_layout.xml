@@ -15,11 +15,11 @@
 
     <TextView
         android:id="@+id/all_name_text"
-        android:layout_width="100dp"
+        android:layout_width="187dp"
         android:layout_height="29dp"
         android:layout_alignEnd="@+id/all_level_text"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="-51dp"
         android:text="TextView"
         android:textSize="18sp" />
 
@@ -27,17 +27,17 @@
         android:id="@+id/all_level_text"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:layout_alignBottom="@+id/all_image"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="30dp"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/addfriend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/all_name_text"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="16dp"
         android:text="Add Friend" />
 </RelativeLayout>

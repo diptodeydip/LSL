@@ -8,8 +8,13 @@
             android:id="@+id/nav_prof"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_prac"
-            android:title="Practice" />
+            android:id="@+id/nav_pracphoto"
+            android:title="Photo Tutorial" />
+
+        <item
+            android:id="@+id/nav_pracvid"
+            android:title="Video Tutorial" />
+
         <item
             android:id="@+id/nav_quiz"
             android:title="Quiz Test" />

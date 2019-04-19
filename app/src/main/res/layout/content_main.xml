@@ -8,10 +8,16 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
+    <FrameLayout
+        android:layout_margin="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:id="@+id/welcomemsg"/>
-
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:id="@+id/welcomemsg"
+            android:text="Welcome :)"/>
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>

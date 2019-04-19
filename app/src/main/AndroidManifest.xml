@@ -22,7 +22,12 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
         <activity android:name=".Contents" />
-        <activity android:name=".Categories"></activity>
+        <activity android:name=".Categories" />
+        <activity android:name=".Profile" />
+        <activity android:name=".QuizContents" />
+        <activity android:name=".Leaderboard" />
+        <activity android:name=".Quiz" />
+        <activity android:name=".VideoContents"></activity>
     </application>
 
 </manifest>

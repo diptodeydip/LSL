@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -29,18 +30,20 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        username = findViewById(R.id.username);
-        un = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString();
-        username.setText(un);
-        username = findViewById(R.id.welcomemsg);
-        username.setText(un);
+        Toast.makeText(MainActivity.this,"Welcome "+FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString(),Toast.LENGTH_LONG).show();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+/*        username = findViewById(R.id.username);
+        un = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString();
+        username.setText(un);
+        username = findViewById(R.id.welcomemsg);
+        username.setText("Welcome "+un);*/
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -85,17 +88,20 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_prof) {
-            Profile frag = new Profile();
-            FragmentManager fm = getSupportFragmentManager();
-            fm.beginTransaction().replace(R.id.frame1,frag).commit();
-            // Handle the camera action
-        } else if (id == R.id.nav_prac) {
+            finish();
+            startActivity(new Intent(MainActivity.this,Profile.class));
+        } else if (id == R.id.nav_pracphoto) {
             startActivity(new Intent(MainActivity.this,Categories.class));
 
-        } else if (id == R.id.nav_leader) {
+        }
+        else if (id == R.id.nav_pracvid) {
+            startActivity(new Intent(MainActivity.this,VideoContents.class));
+        }
+        else if (id == R.id.nav_leader) {
+            startActivity(new Intent(getApplicationContext(),Leaderboard.class));
 
         } else if (id == R.id.nav_quiz) {
-
+            startActivity(new Intent(MainActivity.this,QuizContents.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

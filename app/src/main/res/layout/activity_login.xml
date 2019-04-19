@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="99dp"
         android:ems="10"
-        android:hint="name"
+        android:hint="Email"
         android:inputType="textPersonName" />
 
     <Button
@@ -37,16 +37,7 @@
         android:hint="password"
         android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/login_signup_hint"
-        android:layout_width="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="320dp"
-        android:text="Didn't have an account? sign up."
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/sign_up_button"

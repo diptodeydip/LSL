@@ -76,4 +76,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         }
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser() != null){
+            finish();
+            startActivity(new Intent(this,MainActivity.class));
+        }
+    }
+
 }

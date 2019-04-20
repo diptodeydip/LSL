@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class Categories extends AppCompatActivity {
 
     Button al,emo,days;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.2F);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,7 @@ public class Categories extends AppCompatActivity {
         al.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 MainActivity.category = "Alphabets";
                 ////finish();
                 startActivity(new Intent(Categories.this,Contents.class));
@@ -28,6 +32,7 @@ public class Categories extends AppCompatActivity {
         emo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 MainActivity.category = "Emotions";
                // finish();
                 startActivity(new Intent(Categories.this,Contents.class));
@@ -36,6 +41,7 @@ public class Categories extends AppCompatActivity {
         days.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 MainActivity.category = "Days";
                //// finish();
                 startActivity(new Intent(Categories.this,Contents.class));

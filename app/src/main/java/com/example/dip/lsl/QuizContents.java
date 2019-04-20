@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -21,6 +22,7 @@ import org.w3c.dom.Text;
 
 public class QuizContents extends AppCompatActivity {
 
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.2F);
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private Button btnDisplay;
@@ -46,8 +48,10 @@ public class QuizContents extends AppCompatActivity {
         btnDisplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.startAnimation(buttonClick);
                 int selectedId=radioGroup.getCheckedRadioButtonId();
                 radioButton=(RadioButton)findViewById(selectedId);
+                radioButton.setChecked(false);
                 if(count == 0){
                     if(radioButton.getText().toString().equalsIgnoreCase("a")){
                         count++;

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +24,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private Button signInButton;
     private TextView signUpHint;
     private FirebaseAuth mAuth;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.2F);
+
 
 
     @Override
@@ -42,6 +45,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v==loginButton){
+            v.startAnimation(buttonClick);
             String email,password;
             email = loginName.getText().toString().trim();
             password = loginPassword.getText().toString().trim();
@@ -71,6 +75,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         }
         else if(v==signInButton){
+            v.startAnimation(buttonClick);
             startActivity(new Intent(getApplicationContext(), Register.class));
 
 

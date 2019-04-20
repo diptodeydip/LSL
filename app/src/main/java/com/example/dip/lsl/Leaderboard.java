@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -30,6 +31,7 @@ public class Leaderboard extends AppCompatActivity implements View.OnClickListen
     private EditText searchFied;
     public Button addfriend;
     public static String uid;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.2F);
 
 
     @Override
@@ -55,6 +57,7 @@ public class Leaderboard extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if(v==searchButton){
+            v.startAnimation(buttonClick);
             String searchText = searchFied.getText().toString();
 
             userSearch(searchText);

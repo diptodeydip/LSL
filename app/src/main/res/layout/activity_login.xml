@@ -20,12 +20,12 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="104dp"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/design"
         android:layout_marginTop="250dp"
+        android:background="@drawable/design"
         android:text="LOG IN" />
 
     <EditText
@@ -42,11 +42,11 @@
 
     <Button
         android:id="@+id/sign_up_button"
-        android:layout_width="102dp"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@drawable/design"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="320dp"
+        android:background="@drawable/design"
         android:text="sign up" />
 </RelativeLayout>

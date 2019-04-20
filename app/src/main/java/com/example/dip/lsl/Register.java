@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private Button registerButton;
     private FirebaseAuth mAuth;
     private DatabaseReference myRef;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.2F);
 
 
     @Override
@@ -52,6 +54,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if(v==registerButton){
+            v.startAnimation(buttonClick);
             String email,password;
             email= emailEditText.getText().toString().trim();
             password = passwordText.getText().toString().trim();
